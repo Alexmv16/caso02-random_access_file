@@ -19,7 +19,7 @@ public class App {
 			Cliente cli = new Cliente((short) 1001, "Sergio", "Lo que sea", 1000f);
 			p.guardar(cli);
 
-			p.irRegistro(2);
+			p.irRegistro(1);
 			System.out.println(p.leer());
 
 			p.borrarRegistro();
@@ -33,10 +33,10 @@ public class App {
 			} else {
 				System.out.println("No existe o está borrado");
 			}
-			
+
 			System.out.println("- Buscando por aproximación de nombre");
 			List<Cliente> listaClientes = p.buscarPorNombre("Sergio");
-			for(Cliente c: listaClientes) {
+			for (Cliente c : listaClientes) {
 				System.out.println(c);
 			}
 
@@ -56,9 +56,9 @@ public class App {
 		System.out.println("---------------------------------");
 		for (int i = 0; i < p.totalRegistros(); i++) {
 			cli = p.leer();
-//			if (!cli.estaBorrado()) {
-			System.out.println(cli);
-//			}
+			if (!cli.estaBorrado()) {
+				System.out.println(cli);
+			}
 		}
 		System.out.println("---------------------------------");
 		System.out.println("Total registros: " + p.totalRegistros());

@@ -29,11 +29,7 @@ public class Persistencia {
 	}
 
 	public void guardar(Cliente cli) throws IOException {
-		// completar. Se debe guardar en el orden correspondiente.
-		raf.writeShort(cli.getId());
-		raf.writeChars(cli.getNombre().toString());
-		raf.writeChars(cli.getApellidos().toString());
-		raf.writeFloat(cli.getSaldo());
+		// completar. Se debe guardar en el orden correspondiente.		
 	}
 
 	public Cliente leer() throws IOException {

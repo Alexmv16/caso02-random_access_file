@@ -97,7 +97,7 @@ class TestPersistencia {
 		clientesTest2.add(c7);
 		try {
 			assertArrayEquals(clientesTest1.toArray(), persistenciaTest.buscarPorNombre("Sergio").toArray());
-			assertArrayEquals(clientesTest1.toArray(), persistenciaTest.buscarPorNombre("Sergio").toArray());
+			assertArrayEquals(clientesTest2.toArray(), persistenciaTest.buscarPorNombre("Juan").toArray());
 			assertEquals(persistenciaTest.buscarPorNombre("Pedro").size(), 0);
 		} catch (IOException e) {
 			fail("El test falla durante test2: buscar por nombre cliente");
